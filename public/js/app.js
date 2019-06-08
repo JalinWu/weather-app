@@ -19,7 +19,7 @@ $('form').submit((e) => {
     $('#msg-1').text('Loading...');
     $('#msg-2').text('');
     // console.log($('input').val());
-    fetch(`http://localhost:3000/weather?address=${$('input').val()}`).then((response) => {
+    fetch(`/weather?address=${$('input').val()}`).then((response) => {
     response.json().then((data) => {
         if(data.error){
             console.log('Error occured');
